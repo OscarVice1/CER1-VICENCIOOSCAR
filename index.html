@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Smart Events</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+             <a class="navbar-brand fw-bold" href="#">Smart Events</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                ia-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse ms" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class=" nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#eventos">Eventos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#comunidad">Comunidad</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--Hero-->
+    <section class="container-fluid py-5 bg-black" id="hero">
+        <div class="row align-items-center justify-content-center">
+            <!--columnas para el texto-->
+            <div class="col-12 col-md-6 col-lg-12 text-center p-5">
+                <h1 class="display-1 text-info">En vivo  <span class="nombre-artista fw-bolder">Boywithuke</span></h1>
+            </div>
+            <!--columnas para la imagen-->
+            <div class="col-12 col-md-6 col-lg-12 d-lg-flex justify-content-center">
+                <img src="img/main_event.jpg" class="img-fluid" alt="Boywithuke">
+            </div>
+            <!-- Contador con moment.js -->
+            <div id="countdown" class="row justify-content-center">
+                <div class="col-6 col-md-3 mb-2">
+                    <div class="card bg-black text-white p-3 text-center">
+                        <h2 id="days" class="fs-1">00</h2>
+                        <p class="fs-6 m-auto">Días</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-2">
+                    <div class="card bg-black  text-white p-3 text-center">
+                        <h2 id="hours" class="fs-1">00</h2>
+                        <p class="fs-6 m-auto">Horas</p>
+                    </div>
+                </div>
+            
+                <div class="col-6 col-md-3 mb-2">
+                    <div class="card bg-black text-white p-3 text-center">
+                        <h2 id="minutes" class="fs-1">00</h2>
+                        <p class="fs-6 m-auto ">Minutos</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-2">
+                    <div class="card bg-black text-white p-3 text-center">
+                        <h2 id="seconds" class="fs-1">00</h2>
+                        <p class="fs-6 m-auto">Segundos</p>
+                    </div>
+                </div>
+                <!-- Botón Más información -->
+                <p class="text-center">
+                    <a class="btn btn-outline-info text-light" data-bs-toggle="collapse" href="#collapseHero" role="button" aria-expanded="false"
+                        aria-controls="collapseHero ">
+                        Más información
+                    </a>
+                </p>
+                <!-- Collapse vertical -->
+                <div class="collapse" id="collapseHero">
+                    <div class="card card-body bg-dark text-light mx-auto" style="width: 300px;">
+                        <p class="mb-1"><strong>Costo entrada:</strong> 80.000 pesos</p>
+                        <p class="mb-1"><strong>Lugar:</strong> Movistar Arena</p>
+                        <p class="mb-1"><strong>Fecha del evento:</strong> <span id="fecha-evento"></span></p>
+                        <p class="mb-1"><strong>Hora del evento:</strong> <span id="hora-evento"></span></p>
+                    </div>
+
+                </div>
+                <div id="comenzo" class="text-center text-light mt-2"></div>
+            </div>
+        </div>
+    </section>
+
+    <!--seccion cartas-->
+    <section class="container-fluid p-5 bg-dark-subtle" id="eventos">
+        <h3>Eventos</h3>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+            <div class="col">
+                <div class="card">
+                    <img src="img/banda1.jpg" class="card-img-top" alt="banda1">
+                    <div class="card-body">
+                        <h5 class="card-title">The Rare Occasions</h5>
+                        <p class="card-text"><strong>Costo entrada:</strong> 20.000 pesos</p>
+                        <p class="card-text"><strong>Fecha: </strong> 2025-09-11</p>
+                        <p class="card-text"><strong>Hora: </strong> 20:30</p>
+                        <p class="card-text"><strong>Lugar:</strong> Movistar Arena</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="img/banda2.jpg" class="card-img-top" alt="banda2">
+                    <div class="card-body">
+                        <h5 class="card-title">Arctic Monkeys</h5>
+                        <p class="card-text"><strong>Costo entrada:</strong> 35.000 pesos</p>
+                        <p class="card-text"><strong>Fecha: </strong> 2025-09-15</p>
+                        <p class="card-text"><strong>Hora: </strong> 21:00</p>
+                        <p class="card-text"><strong>Lugar:</strong> Estadio Nacional</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="img/banda3.jpg" class="card-img-top" alt="banda3">
+                    <div class="card-body">
+                        <h5 class="card-title">Los bunkers</h5>
+                        <p class="card-text"><strong>Costo entrada:</strong> 28.000 pesos</p>
+                        <p class="card-text"><strong>Fecha: </strong> 2025-09-20</p>
+                        <p class="card-text"><strong>Hora: </strong> 19:45</p>
+                        <p class="card-text"><strong>Lugar:</strong> Teatro Caupolicán</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col">
+                <div class="card">
+                    <img src="img/banda4.jpg" class="card-img-top" alt="banda4">
+                    <div class="card-body">
+                        <h5 class="card-title">Imagine Dragons</h5>
+                        <p class="card-text"><strong>Costo entrada:</strong> 50.000 pesos</p>
+                        <p class="card-text"><strong>Fecha: </strong> 2025-09-25</p>
+                        <p class="card-text"><strong>Hora: </strong> 22:00</p>
+                        <p class="card-text"><strong>Lugar:</strong> Arena Monticello</p>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </section>
+
+    <!--Seccion de comunidad-->
+    <section id="comunidad">
+        <div class="card p-2 bg-dark text-white">
+            <div class="card-body">
+                <div class="">
+                    <h5>Comunidad</h5>
+                </div>
+                <div id="muro-comentarios" class="list-group mb-4">
+                </div>
+                <form id="comentario-form">
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre/Alias</label>
+                        <input type="text" id="nombre" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="mensaje" class="form-label">Mensaje</label>
+                        <textarea id="mensaje" class="form-control textarea" rows="3" maxlength="500" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-outline-info">Publicar</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>
